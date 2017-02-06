@@ -37,24 +37,4 @@ private:
 	const std::string m_name;
 };
 
-/*class Window {
-	Window(const std::string name, int ScreenW, int ScreenH ) {
-		ASSERT(SDL_Init(SDL_INIT_EVERYTHING) != 0);
-		const Uint8 imgFlags = IMG_INIT_PNG | IMG_INIT_JPG; //unit8 es un integer de 8 bits(multiplataforma)
-		ASSERT(!(IMG_Init(imgFlags) & imgFlags)); //si no nos devuelve lo mismo lanzamos excepcion
-												  //WINDOW
-		//const int WIDTH = 800, HEIGTH = 600;
-		SDL_Window *window = SDL_CreateWindow("hello sdl",
-			SDL_WINDOWPOS_CENTERED,
-			SDL_WINDOWPOS_CENTERED,
-			ScreenW, ScreenW, SDL_WINDOW_SHOWN); //devuelve una informacion q guardamos en un puntero
 
-		ASSERT(window != nullptr)//throw SDL_GetError();
-	}
-public:
-	inline static Window &Instance(std::string &&name = "", int &&screenWidth = 0, int &&screenHeight = 0) {
-		static Window window(std::move(name), std::move(screenWidth), std::move(screenHeight));
-		return window;
-	}
-
-};*/

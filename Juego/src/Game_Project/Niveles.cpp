@@ -11,7 +11,7 @@ using namespace Logger;
 
 static std::vector <int> xmlVal;
 
-Niveles::Niveles() {//constructor, inicializamos la posicion de cada uno de los sprites mencionados y le asignamos su imagen
+Niveles::Niveles() {/
 	background = { { 0, 0, W.GetWidth(), W.GetHeight() }, ObjectID::S_00 };
 	title = { { 250, 0, W.GetWidth() / 2, W.GetHeight() / 2 }, ObjectID::S_01 };
 	easy = { { 400,300,W.GetWidth() / 4, W.GetHeight() / 4 }, ObjectID:: S_03 };

@@ -9,7 +9,6 @@
 #include "Color.h"
 #include "ID.h"
 
-//clase hecha por Jordi que hace la funcion de printear por pantalla aquello q se quiere.
 #define R Renderer::Instance()
 
 // Enum to store text font style

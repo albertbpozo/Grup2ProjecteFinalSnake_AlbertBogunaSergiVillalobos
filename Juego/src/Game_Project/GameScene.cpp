@@ -12,8 +12,7 @@ GameScene::~GameScene() {
 
 void GameScene::OnEntry(void) {
 	
-	/*cout << "press any key to start";
-	getchar();*/
+	
 	if (!start) {
 		columnas = Niveles::GetValue("columns");
 		filas = Niveles::GetValue("rows");
@@ -59,10 +58,6 @@ void GameScene::Update(void) {
 				Bin.write(nom, score.bestScore);
 				start = false;
 				snake.dead = false;
-				/*snake.~Snake();
-				manzana.~Manzana();
-				drawGrid.~Grid();
-				score.~Score();*/
 				SM.SetCurScene <Ranking>();
 				drawGrid.~Grid();
 

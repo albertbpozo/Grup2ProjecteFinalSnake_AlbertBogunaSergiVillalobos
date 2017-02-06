@@ -9,7 +9,7 @@ using namespace Logger;
 
 
 
-Ranking::Ranking() { //constructor, inicializamos la posicion de cada uno de los sprites mencionados y le asignamos su imagen
+Ranking::Ranking() {
 	background = { { 0, 0, W.GetWidth(), W.GetHeight() }, ObjectID::S_00 };
 	menu = { { 222, 550, W.GetWidth() / 3, W.GetHeight() / 3 }, ObjectID::S_13 };
 	exit = { { 502,550,W.GetWidth() / 3, W.GetHeight() / 3 }, ObjectID::S_06 };
@@ -25,9 +25,7 @@ void Ranking::OnExit(void) {
 }
 void Ranking::Update(void) {
 	
-	/*Tops hola;
-	hola = readBin();
-	cout << hola;*/
+	
 
 	static MouseCoords mouseCoords(0, 0); 
 	if (IM.IsMouseDown<MOUSE_BUTTON_LEFT>()) { 

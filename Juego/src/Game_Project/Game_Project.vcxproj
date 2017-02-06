@@ -59,7 +59,6 @@
     <ClInclude Include="Score.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="Sprites.h" />
-    <ClInclude Include="TimeBar.h" />
     <ClInclude Include="TimeManager.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="Window.h" />

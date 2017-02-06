@@ -4,7 +4,7 @@
 
 class MainMenu : public Scene
 {
-public: //decalaracion de cabeceras
+public: 
 	explicit MainMenu();
 	~MainMenu() override;
 	void OnEntry(void) override;

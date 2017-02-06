@@ -25,10 +25,10 @@ void MainMenu::Update(void) {
 	if (IM.IsMouseDown<MOUSE_BUTTON_LEFT>()) { //si hace clickizquierdo
 		mouseCoords = IM.GetMouseCoords();  //se guarda esas coordenadas
 		if ((mouseCoords.x >= 425 && mouseCoords.x <= 615) && (mouseCoords.y >= 430 && mouseCoords.y <= 490)) {		//si el click esta entre estas coordenadas, carga escena Niveles
-			SM.SetCurScene<Niveles>();		//tenemos intencion de cambiar esto por coord x = -sprite.width/2 y coord y = -sprite.height/2 
+			SM.SetCurScene<Niveles>(); 
 		}
 		else if ((mouseCoords.x >= 425 && mouseCoords.x <= 615) && (mouseCoords.y >= 630 && mouseCoords.y <= 690)) {
-			SetState<SceneState::EXIT>(); //si el clickesta entre estas coordenadas, sale deljuego.
+			SetState<SceneState::EXIT>(); 
 		}
 	}
 

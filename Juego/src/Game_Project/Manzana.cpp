@@ -33,8 +33,7 @@ void	Manzana::Comida(	int	snakex,	int	snakey) {
 		x = ((rand() % Niveles::GetValue("rows") * 30));
 		y = ((rand() % Niveles::GetValue("columns") * 30));
 		dibujoManzana.transform = { x,y,30,30 };
-		//dibujoManzana.Draw();
-		//score.scoreUp
+		
 	}
 	
 }

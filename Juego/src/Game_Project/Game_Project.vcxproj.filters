@@ -127,9 +127,6 @@
     <ClInclude Include="Printar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TimeBar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Ranking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
