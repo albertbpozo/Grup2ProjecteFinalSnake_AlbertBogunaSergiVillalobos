@@ -2,12 +2,16 @@
 #pragma region GAME_SCENES
 #include "MainMenu.h"
 #include "Niveles.h"
-
+#include "Ranking.h"
 #include "GameScene.h"
 #include "ID.h"
 #include "SceneManager.h"
 #include "InputManager.h"
 #include "Renderer.h"
+#include "Binario.h"
+
+
+
 #include "TimeManager.h"
 
 #pragma endregion TODO
@@ -27,13 +31,15 @@ namespace GameEngine {
 		R.LoadTexture<ObjectID::S_08>("gfx/snake.png");
 		R.LoadTexture<ObjectID::S_10>("gfx/manzana.png");
 		R.LoadTexture<ObjectID::S_12>("gfx/Celda_vacia.png");
+		R.LoadTexture<ObjectID::S_13>("gfx/Menu.png");
 
 	}
 	
 	void AddScenes(void) {
 		SM.AddScene<MainMenu>(); 
 		SM.AddScene<Niveles>();
-		SM.AddScene<GameScene>();		
+		SM.AddScene<GameScene>();
+		SM.AddScene<Ranking>();
 		SM.SetCurScene <MainMenu> ();
 		
 	}
@@ -45,6 +51,15 @@ namespace GameEngine {
 	*/
 	template<int screenWidth, int screenHeight>
 	void Run(std::string &&name) {
+		/*cout << "Enter name here -> ";
+		
+		std::string albert;
+		getlain()
+		cout << 
+		Bin.write(david, 256);
+		std::vector<Tops> hola;
+		hola = Bin.readBin();
+		cout << hola[0].name;*/
 		Window::Instance(std::move(name), screenWidth, screenHeight); // Initialize window Singleton instance for the first time
 		LoadMedia(); // Loads the resource assets
 		AddScenes(); // Loads the scenes

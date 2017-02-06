@@ -46,8 +46,8 @@ void Snake::Die(int cols, int rows) {
 		dead = true;
 	}
 	else {
-		for (int n = 1; n == body.size(); n++) {
-			if (body[0].transform.x == body[n].transform.x && body[0].transform.y == body[n].transform.y) {
+		for (int n = 1; n < body.size(); n++) {	
+			if (body[0].transform.x == body[n].transform.x			 &&						body[0].transform.y		== body[n].transform.y) {
 				body.erase(body.begin(), body.end());
 				dir = 3;
 				temp.objectID = ObjectID::S_08;

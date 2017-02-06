@@ -10,6 +10,8 @@
 #include "math.h"
 #include "Printar.h"
 #include "Niveles.h"
+#include "Ranking.h"
+
 
 class GameScene : public Scene {
 
@@ -19,6 +21,8 @@ public:
 	Manzana manzana;
 	Score score;
 	Printar printar;
+	std::string nom;
+	bool ready = false;
 	int columnas;
 	int filas;
 	bool start;

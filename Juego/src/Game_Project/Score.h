@@ -15,6 +15,7 @@ public:
 	int level;
 	int recojidas;
 	int score;
+	int bestScore;
 	int levelScore ;
 	int levelRecojidas;
 	int vidas;

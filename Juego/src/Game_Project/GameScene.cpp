@@ -1,5 +1,6 @@
 #include "GameScene.h"
-#include"MainMenu.h"
+#include "Binario.h"
+
 
 GameScene::GameScene() {
 	start = false;
@@ -10,6 +11,9 @@ GameScene::~GameScene() {
 }
 
 void GameScene::OnEntry(void) {
+	
+	/*cout << "press any key to start";
+	getchar();*/
 	if (!start) {
 		columnas = Niveles::GetValue("columns");
 		filas = Niveles::GetValue("rows");
@@ -36,33 +40,43 @@ int GameScene::GiveScore(void) {
 	return score.score;
 }
 void GameScene::Update(void) {
-	
-	snake.Move();
+		snake.Move();
+
+
+		manzana.Comida(snake.x, snake.y);
+		if (manzana.tocada) {
+			snake.Aumentar();
+			score.scoreUp();
+		}
+
+
+		snake.Die(columnas, filas);
+		if (snake.dead) {
+			if (score.vidas <= 0) {
+				cout << "Enter name here -> ";
+				getline(cin, nom);
+				cout << endl << "Hello " << nom << endl;
+				Bin.write(nom, score.bestScore);
+				start = false;
+				snake.dead = false;
+				/*snake.~Snake();
+				manzana.~Manzana();
+				drawGrid.~Grid();
+				score.~Score();*/
+				SM.SetCurScene <Ranking>();
+				drawGrid.~Grid();
+
+				//Bin.write(GameEngine::GiveName(), score.score);
+			}
+			else {
+				score.dead(); snake.dead = false;
+				for (int n = 0; n < score.levelRecojidas; n++) {
+					snake.Aumentar();
+				}
+			}
+		}
 
 	
-	manzana.Comida(snake.x, snake.y);
-	if (manzana.tocada) {
-		snake.Aumentar();
-		score.scoreUp();
-	}
-	
-	snake.Die(columnas, filas);
-	if (snake.dead) {
-		if (score.vidas <= 0) {
-			start = false;
-			/*snake.~Snake();
-			manzana.~Manzana();
-			drawGrid.~Grid();
-			score.~Score();*/
-			SM.SetCurScene <MainMenu>();
-		}
-		else{
-		score.dead(); snake.dead = false;
-		for (int n = 0; n < score.levelRecojidas; n++) {
-			snake.Aumentar();
-		}
-		}
-	}
 	
 }
 

@@ -19,4 +19,5 @@ class Printar {
 public:
 	int score;
 	void printScore(int, int);
+	void printRank();
 };

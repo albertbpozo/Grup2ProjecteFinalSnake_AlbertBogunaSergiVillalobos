@@ -15,6 +15,7 @@ Score::Score(){
 	level = 1;
 	recojidas = 0;
 	score = 0;
+	bestScore = 0;
 	levelScore = 0;
 	levelRecojidas = 0;
 	vidas = 3;
@@ -23,6 +24,7 @@ Score::~Score() {
 
 }
 void Score::dead() {
+	if (score > bestScore) {		bestScore = score;	}
 	score = levelScore;
 	vidas--;
 	recojidas =levelRecojidas;
